@@ -1,0 +1,296 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    margin: 0;
+    color: #333;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem; /* Ajusta apenas o espaçamento lateral */
+}
+
+
+.header {
+    background: #000;
+    color: #fff;
+    padding: 0.5rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+
+.logo {
+    width: 50px;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    /* Espaçamento entre os links */
+}
+
+.menu a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+    transition: color 0.3s ease;
+}
+
+.menu a:hover {
+    color: #f39c12;
+    /* Adiciona uma cor de destaque ao passar o mouse */
+}
+
+/* Ícones no canto direito */
+.social-icons {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-icons a img {
+    width: 35px;
+    /* Tamanho dos ícones */
+    height: 35px;
+    transition: transform 0.3s ease;
+}
+
+.social-icons a img:hover {
+    transform: scale(1.2);
+    /* Aumenta os ícones ao passar o mouse */
+}
+
+.img-1 {
+
+    width: 100%;
+    height: 100vh;
+    /* A altura ocupará toda a tela */
+    object-fit: cover;
+    /* Ajusta a imagem para preencher o espaço */
+    display: block;
+    /* Evita espaços extras ao redor da imagem */
+    background-position: center;
+    /* Centraliza o foco da imagem */
+    background-repeat: no-repeat;
+    /* Impede que a imagem se repita */
+    background-size: cover;
+    /* Ajusta para cobrir todo o contêiner */
+}
+
+.banner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 15%;
+    background-color: #f39c12;
+    color: #000;
+}
+
+/* Estilização da seção Sobre */
+.sobre {
+    padding: 4rem 2rem;
+    background-color: #fff;
+}
+
+.container-sobre {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.imagem-sobre {
+    width: 40%;
+    height: auto;
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra leve */
+}
+
+.texto-sobre {
+    width: 60%;
+    color: #333;
+}
+
+.texto-sobre h2 {
+    font-size: 2rem;
+    color: #000;
+    margin-bottom: 1rem;
+}
+
+.texto-sobre p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+
+.compra-img {
+    width: 150px;
+}
+
+.banner h2 {
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+
+
+.produtos {
+    padding: 2rem;
+    background: #fff;
+}
+
+.produtos h2 {
+    text-align: center;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.camiseta-img {
+    width: 150px;
+}
+
+.produto {
+
+    text-align: center;
+    background: #fff;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    cursor: pointer;
+}
+
+.produto img:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+
+.animado {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.animado.visivel {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+#voltar-ao-topo {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    opacity: 0.5;
+    transition: opacity 0.3s ease;
+  }
+  
+  #voltar-ao-topo:hover {
+    opacity: 1;
+  }
+
+footer {
+    background: #f39c12;
+    color: #000;
+    font-size: 17px;
+    text-align: center;
+    padding: 1rem;
+}
+@media (min-width: 481px) and (max-width: 768px) {
+    .header {
+      padding: 15px 0;
+      justify-content: flex-start;
+    }
+    .logo {
+      width: 60px; /* Ajuste o tamanho da logo */
+    }
+    .menu {
+      gap: 15px;
+    }
+    .menu a {
+      font-size: 16px;
+    }
+    .social-icons {
+      gap: 10px;
+    }
+    .social-icons a img {
+      width: 25px;
+      height: 25px;
+    }
+  }
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .menu {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .banner {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .container-sobre {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .imagem-sobre {
+        width: 80%;
+    }
+
+    .texto-sobre {
+        width: 100%;
+    }
+
+    .grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+}
+
+@media (max-width: 1024px) {
+    .banner {
+        padding: 20px 10%;
+    }
+
+    .container-sobre {
+        gap: 1rem;
+    }
+
+    .menu a {
+        font-size: 18px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .banner h2 {
+        font-size: 3rem;
+    }
+
+    .texto-sobre h2 {
+        font-size: 2.5rem;
+    }
+}
