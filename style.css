@@ -236,124 +236,67 @@ footer {
     text-align: center;
     padding: 1rem;
 }
+
 @media (max-width: 480px) {
-    /* Reduzindo o header */
-    .header {
-        height: 50px; /* Diminuindo a altura */
-        padding: 5px;
-    }
-
-    .logo {
-        width: 35px; /* Reduzindo a logo */
-    }
-
-    .menu a {
-        font-size: 10px; /* Diminuindo o tamanho do texto */
-        padding: 3px;
-    }
-
-    .social-icons a img {
-        width: 16px; /* Diminuindo os ícones sociais */
-        height: 16px;
-    }
-
-    /* Ajustando o banner */
-    .banner {
-        height: 150px; /* Reduzindo a altura do banner */
-        background-size: contain; /* Evitando que o fundo fique muito grande */
-    }
-
-    .banner h2 {
-        font-size: 1.2rem; /* Reduzindo o título */
-    }
-
-    .banner p {
-        font-size: 0.8rem; /* Reduzindo o tamanho do texto */
-    }
-
-    /* Diminuindo os ícones do banner */
-    .banner img {
-        width: 80px; /* Ajuste conforme necessário */
-    }
-}
-
-@media (min-width: 481px) and (max-width: 768px) {
-    .header {
-      padding: 15px 0;
-      justify-content: flex-start;
-    }
-    .logo {
-      width: 60px; /* Ajuste o tamanho da logo */
-    }
-    .menu {
-      gap: 15px;
-    }
-    .menu a {
-      font-size: 16px;
-    }
-    .social-icons {
-      gap: 10px;
-    }
-    .social-icons a img {
-      width: 25px;
-      height: 25px;
-    }
-  }
-
-@media (max-width: 768px) {
+    /* Ajuste da logo para o canto esquerdo */
     .container {
-        flex-direction: column;
-        text-align: center;
+        justify-content: flex-start;
+        position: relative; /* Para ajudar no posicionamento dos ícones sociais */
     }
 
+    .logo {
+        width: 30px;
+    }
+
+    /* Esconder o menu */
     .menu {
-        flex-direction: column;
-        gap: 1rem;
+        display: none;
     }
 
+    /* Centralizar os ícones sociais */
+    .social-icons {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .social-icons a img {
+        width: 20px;
+        height: 20px;
+    }
+
+    /* Ajustes do banner */
     .banner {
+        padding: 15px;
+        display: flex;
         flex-direction: column;
+        align-items: center;
         text-align: center;
     }
 
-    .container-sobre {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .imagem-sobre {
-        width: 80%;
-    }
-
-    .texto-sobre {
-        width: 100%;
-    }
-
-    .grid {
-        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    }
-}
-
-@media (max-width: 1024px) {
-    .banner {
-        padding: 20px 10%;
-    }
-
-    .container-sobre {
-        gap: 1rem;
-    }
-
-    .menu a {
-        font-size: 18px;
-    }
-}
-
-@media (min-width: 1200px) {
     .banner h2 {
-        font-size: 3rem;
+        font-size: 1.5rem;
     }
 
-    .texto-sobre h2 {
-        font-size: 2.5rem;
+    /* Deixar imagens de compra e envio lado a lado */
+    .banner .imagens {
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .banner img {
+        width: 80px;
+    }
+
+    .compra-img, .camiseta-img {
+        width: 100px;
+    }
+
+    .btn-comprar {
+        width: 80px;
+        height: 30px;
+        font-size: 12px;
     }
 }
