@@ -237,33 +237,45 @@ footer {
     padding: 1rem;
 }
 @media (max-width: 480px) {
+    /* Reduzindo o header */
     .header {
-        padding: 10px 0;
-        justify-content: center;
+        height: 50px; /* Diminuindo a altura */
+        padding: 5px;
     }
 
     .logo {
-        width: 50px; /* Reduzindo o tamanho da logo */
+        width: 35px; /* Reduzindo a logo */
     }
 
     .menu a {
-        font-size: 14px; /* Reduzindo o tamanho da fonte */
+        font-size: 10px; /* Diminuindo o tamanho do texto */
+        padding: 3px;
     }
 
     .social-icons a img {
-        width: 20px; /* Ajustando os ícones sociais */
-        height: 20px;
+        width: 16px; /* Diminuindo os ícones sociais */
+        height: 16px;
     }
 
+    /* Ajustando o banner */
     .banner {
-        padding: 10px;
+        height: 150px; /* Reduzindo a altura do banner */
+        background-size: contain; /* Evitando que o fundo fique muito grande */
     }
 
     .banner h2 {
-        font-size: 1.5rem; /* Reduzindo o tamanho do título */
+        font-size: 1.2rem; /* Reduzindo o título */
+    }
+
+    .banner p {
+        font-size: 0.8rem; /* Reduzindo o tamanho do texto */
+    }
+
+    /* Diminuindo os ícones do banner */
+    .banner img {
+        width: 80px; /* Ajuste conforme necessário */
     }
 }
-
 
 @media (min-width: 481px) and (max-width: 768px) {
     .header {
