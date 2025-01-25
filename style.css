@@ -72,7 +72,8 @@ body {
 .img-1 {
 
     width: 100%;
-    height: 100vh;
+    height: auto;
+    max-height: 95vh; /* Define uma altura máxima relativa à tela */
     /* A altura ocupará toda a tela */
     object-fit: cover;
     /* Ajusta a imagem para preencher o espaço */
