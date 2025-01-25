@@ -241,19 +241,16 @@ footer {
     /* Ajuste da logo para o canto esquerdo */
     .container {
         justify-content: flex-start;
-        position: relative; /* Para ajudar no posicionamento dos ícones sociais */
-    }
+        position: relative; 
+        }
 
     .logo {
         width: 30px;
     }
-
-    /* Esconder o menu */
     .menu {
         display: none;
     }
 
-    /* Centralizar os ícones sociais */
     .social-icons {
         position: absolute;
         left: 50%;
@@ -264,30 +261,13 @@ footer {
         width: 20px;
         height: 20px;
     }
-
-    /* Ajustes do banner */
     .banner {
         padding: 15px;
         display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
+    
     }
-
-    .banner h2 {
-        font-size: 1.5rem;
-    }
-
-    /* Deixar imagens de compra e envio lado a lado */
-    .banner .imagens {
-        display: flex;
-        gap: 1rem;
-        justify-content: center;
-        flex-wrap: wrap;
-    }
-
     .banner img {
-        width: 80px;
+        width: 70px;
     }
 
     .compra-img, .camiseta-img {
@@ -302,15 +282,15 @@ footer {
 
     .container-sobre {
         flex-direction: column;
-        text-align: center; /* Centraliza o texto */
+        text-align: center; 
     }
 
     .imagem-sobre {
-        width: 100%; /* Faz a imagem ocupar toda a largura */
+        width: 100%; 
     }
 
     .texto-sobre {
-        width: 100%; /* Ajusta o texto para ocupar toda a largura */
+        width: 100%; 
     }
 }
 
