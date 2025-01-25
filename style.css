@@ -299,4 +299,18 @@ footer {
         height: 30px;
         font-size: 12px;
     }
+
+    .container-sobre {
+        flex-direction: column;
+        text-align: center; /* Centraliza o texto */
+    }
+
+    .imagem-sobre {
+        width: 100%; /* Faz a imagem ocupar toda a largura */
+    }
+
+    .texto-sobre {
+        width: 100%; /* Ajusta o texto para ocupar toda a largura */
+    }
 }
+
