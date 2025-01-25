@@ -24,5 +24,13 @@ window.addEventListener('scroll', () => {
   }
 });
 
+const comprarProduto = (botao) => {
+  const nomeProduto = botao.getAttribute("data-nome"); // Pega o nome do produto do botão clicado
+  const numero = "5561998801863"; // Seu número do WhatsApp com DDD
+  const mensagem = `Olá, tenho interesse no produto: ${nomeProduto}. Ainda está disponível?`;
+  const url = `http://wa.me/${numero}?text=${encodeURIComponent(mensagem)}`;
+
+  window.open(url, "_blank"); // Abre o WhatsApp com a mensagem pré-preenchida
+};
 
 
