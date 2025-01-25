@@ -236,6 +236,35 @@ footer {
     text-align: center;
     padding: 1rem;
 }
+@media (max-width: 480px) {
+    .header {
+        padding: 10px 0;
+        justify-content: center;
+    }
+
+    .logo {
+        width: 50px; /* Reduzindo o tamanho da logo */
+    }
+
+    .menu a {
+        font-size: 14px; /* Reduzindo o tamanho da fonte */
+    }
+
+    .social-icons a img {
+        width: 20px; /* Ajustando os ícones sociais */
+        height: 20px;
+    }
+
+    .banner {
+        padding: 10px;
+    }
+
+    .banner h2 {
+        font-size: 1.5rem; /* Reduzindo o tamanho do título */
+    }
+}
+
+
 @media (min-width: 481px) and (max-width: 768px) {
     .header {
       padding: 15px 0;
