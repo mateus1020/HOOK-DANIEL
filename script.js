@@ -1,7 +1,7 @@
 const elementos = document.querySelectorAll(".animado");
 // Animação dos elementos na pagina.
 window.addEventListener("scroll", () => {
-    const trigger = window.innerHeight * 0.7;
+    const trigger = window.innerHeight * 0.8;
 
     elementos.forEach((el) => {
         const pos = el.getBoundingClientRect().top;
@@ -23,4 +23,6 @@ window.addEventListener('scroll', () => {
     botao.style.display = 'none';
   }
 });
+
+
 
