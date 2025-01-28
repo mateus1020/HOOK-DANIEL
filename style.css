@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Poppins", serif;
+    font-family: "Poppins", sans-serif;
 }
 
 body {
@@ -73,7 +73,7 @@ body {
 
     width: 100%;
     height: auto;
-    max-height: 95vh; /* Define uma altura máxima relativa à tela */
+    max-height: 103vh; /* Define uma altura máxima relativa à tela */
     /* A altura ocupará toda a tela */
     object-fit: cover;
     /* Ajusta a imagem para preencher o espaço */
@@ -123,7 +123,7 @@ body {
 }
 
 .texto-sobre h2 {
-    font-size: 2rem;
+    font-size: 3rem;
     color: #000;
     margin-bottom: 1rem;
 }
@@ -144,15 +144,131 @@ body {
     margin: 0;
 }
 
-
-
-.produtos {
-    padding: 2rem;
-    background: #fff;
+.nova-colecao {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px; /* Aumentei o espaço entre imagem e descrição */
+    max-width: 1200px;
+    margin: 50px auto; /* Espaço abaixo do banner */
+    padding: 20px;
 }
 
+.carrossel-container {
+    position: relative;
+    width: 500px; /* Aumentei o tamanho */
+    height: 600px; /* Aumentei a altura */
+    overflow: hidden;
+    flex-shrink: 0; /* Evita que o carrossel diminua */
+}
+
+.carrossel {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.carrossel-item {
+    display: none;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.carrossel-item.active {
+    display: block;
+}
+
+.carrossel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+#prev {
+    left: 10px;
+}
+
+#next {
+    right: 10px;
+}
+
+/* Ajuste para a descrição ficar alinhada à direita */
+.descricao {
+    max-width: 500px;
+    text-align: left; /* Mantém o texto alinhado à esquerda */
+}
+
+.descricao h2 {
+    font-size: 2rem;
+    color: #000;
+}
+
+.descricao p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+.botao-compra {
+    font-size: 18px;
+    cursor: pointer;
+    background: #b81414;
+    width: 180px;
+    height: 40px;
+    color: #fff;
+    margin-top: 10px;
+    border: none;
+    border-radius: 4px;
+}
+
+.botao-compra:hover {
+    background: #333;
+}
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Mantém 3 colunas */
+    gap: 1rem; /* Espaço entre os itens */
+    max-width: 100%; /* Agora ocupa toda a largura da seção */
+    width: 100%; /* Garante que ocupe o espaço corretamente */
+    margin: 0 auto; /* Centraliza na página */
+}
+
+.produtos {
+    max-width: 1200px; 
+    margin: 0 auto; /* Garante centralização */
+    text-align: center; /* Centraliza o texto dentro da seção */
+    background: #fff;
+    padding: 2rem 0; /* Adiciona espaço para respirar */
+}
+
+
 .produtos h2 {
+    font-size: 2rem;
+    color: #000;
     text-align: center;
+    justify-content: center;
+}
+
+.produto {
+    text-align: center;
+    background: #fff;
+    border: 1px solid #ddd;
+    cursor: pointer;
+    padding: 15px; /* Adiciona espaçamento interno */
+    border-radius: 8px; /* Deixa os cantos levemente arredondados */
+}
+
+
+.produto img:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
 }
 
 .btn-comprar {
@@ -174,29 +290,17 @@ body {
 } 
 
 
-.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1rem;
-   
+
+.imagens {
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* Espaço entre as imagens */
 }
 
 .camiseta-img {
-    width: 150px;
-}
-
-.produto {
-
-    text-align: center;
-    background: #fff;
-    padding: 1rem;
-    border: 1px solid #ddd;
-    cursor: pointer;
-}
-
-.produto img:hover {
-    transform: scale(1.1);
-    transition: transform 0.3s ease;
+    width: 150px; /* Mantém a largura padrão */
+    height: 200px; /* Define uma altura fixa para todas as imagens */
+    object-fit: cover; /* Ajusta a imagem sem distorcer */
 }
 
 .animado {

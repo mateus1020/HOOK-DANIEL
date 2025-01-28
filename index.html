@@ -18,9 +18,9 @@
 
 
             <nav class="menu">
-                <a href="#loja">Loja</a>
-                <a href="#produtos">Produtos</a>
-                <a href="#sobre">Sobre</a>
+                <a href="#loja">LOJA</a>
+                <a href="#produtos">PRODUTOS</a>
+                <a href="#sobre">SOBRE</a>
             </nav>
 
             <!-- Ícones no canto direito -->
@@ -51,23 +51,64 @@
             </div>
         </section>
 
+        <section class="nova-colecao">
+            <div class="carrossel-container">
+                <button id="prev" class="carrossel-btn">&#10094;</button>
+                <div class="carrossel">
+                    <img src="./img/colecaoN/camisetaN1.jpeg" class="carrossel-item active">
+                    <img src="./img/colecaoN/camisetaN2.jpeg" class="carrossel-item">
+                    <img src="./img/colecaoN/camisetaN3.jpeg" class="carrossel-item">
+                    <img src="./img/colecaoN/camisetaN4.jpeg"class="carrossel-item">
+                </div>
+                <button id="next" class="carrossel-btn">&#10095;</button>
+            </div>
+            <div class="descricao">
+                <h2>Coleção Nova : Camiseta HH</h2>
+                <p>Apresentamos nossa nova linha. Feito com material de alta qualidade, ideal para quem busca conforto e estilo no dia a dia.</p>
+                <p>Disponível em diversos tamanhos.</p>
+                <br>
+                <button class="botao-compra" onclick="comprarProduto(this)" data-nome="Camiseta Masculina">COMPRAR AGORA</button>
+            </div>
+        </section>
+        
         <section id="produtos" class="produtos">
             <h2 class="animado">Nossos Produtos</h2>
             <br>
             <div class="grid">
                 <div class="produto">
-                    <img src="./img/camiseta.jpeg" alt="Camiseta Jiu-Jitsu" class="camiseta-img">
+                    <div class="imagens">
+                        <img src="./img/camisa-nova.jpeg" alt="Camiseta Jiu-Jitsu" class="camiseta-img">
+                        <img src="./img/camisa-nova2.png" alt="Camiseta Jiu-Jitsu" class="camiseta-img">
+                    </div>
+                    <br>
                     <p>Camiseta Masculina</p>
                     <p>119,99$</p>
                     <button class="btn-comprar" onclick="comprarProduto(this)" data-nome="Camiseta Masculina">COMPRAR</button>
                 </div>
                 <div class="produto">
-                    <img src="./img/camiseta.jpeg" alt="Camiseta Feminina" class="camiseta-img">
-                    <p>Camiseta Feminina</p>
-                    <p>79,99$</p>
-                    <button class="btn-comprar" onclick="comprarProduto(this)" data-nome="Camiseta Feminina">COMPRAR</button>
+                    <div class="imagens">
+                        <img src="./img/rash1.png" alt="Camiseta Feminina" class="camiseta-img">
+                        <img src="./img/rash2.png" alt="Camiseta Feminina" class="camiseta-img">
+                    </div>
+                    <br>
+                    <p>Rash Guard N1</p>
+                    <p>119,99$</p>
+                    <button class="btn-comprar" onclick="comprarProduto(this)" data-nome="Rash Guard N1">COMPRAR</button>
                 </div>
-                <!-- Adicione mais produtos aqui -->
+
+                <div class="produto">
+                    <div class="imagens">
+                        <img src="./img/adesivo1.jpeg" alt="Adesivo" class="camiseta-img">
+                        <img src="./img/adesivo2.png" alt="Adesivo" class="camiseta-img">
+                    </div>
+                    <br>
+                    <p>Adesivos Heel-Hook</p>
+                    <p>5,00$</p>
+                    <button class="btn-comprar" onclick="comprarProduto(this)" data-nome="Adesivos Heel-Hook">COMPRAR</button>
+                </div>
+            </div>
+            
+                <!-- Adicione mais produtos aqui 
                 <div class="produto">
                     <img src="./img/camiseta.jpeg" alt="Camiseta Jiu-Jitsu" class="camiseta-img">
                     <p>Camiseta Masculina</p>
@@ -80,7 +121,7 @@
                     <p>79,99$</p>
                     <button class="btn-comprar">COMPRAR</button>
                 </div>
-                <!-- Adicione mais produtos aqui -->
+                 Adicione mais produtos aqui 
                 <div class="produto">
                     <img src="./img/camiseta.jpeg" alt="Camiseta Jiu-Jitsu" class="camiseta-img">
                     <p>Camiseta Masculina</p>
@@ -92,7 +133,7 @@
                     <p>Camiseta Feminina</p>
                     <p>79,99$</p>
                     <button class="btn-comprar">COMPRAR</button>
-                </div>
+                </div> -->
         </section>
 
         <section id="sobre" class="sobre">

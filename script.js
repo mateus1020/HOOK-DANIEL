@@ -34,3 +34,28 @@ const comprarProduto = (botao) => {
 };
 
 
+document.addEventListener("DOMContentLoaded", () => {
+  const imagens = document.querySelectorAll(".carrossel-item");
+  const prevBtn = document.getElementById("prev");
+  const nextBtn = document.getElementById("next");
+  let index = 0;
+
+  function atualizarCarrossel() {
+      imagens.forEach((img, i) => {
+          img.classList.remove("active");
+          if (i === index) img.classList.add("active");
+      });
+  }
+
+  prevBtn.addEventListener("click", () => {
+      index = (index === 0) ? imagens.length - 1 : index - 1;
+      atualizarCarrossel();
+  });
+
+  nextBtn.addEventListener("click", () => {
+      index = (index === imagens.length - 1) ? 0 : index + 1;
+      atualizarCarrossel();
+  });
+
+  atualizarCarrossel();
+});
