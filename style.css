@@ -48,7 +48,6 @@ body {
 
 .menu a:hover {
     color: #ff0000;
-    /* Adiciona uma cor de destaque ao passar o mouse */
 }
 
 /* Ícones no canto direito */
@@ -59,14 +58,12 @@ body {
 
 .social-icons a img {
     width: 35px;
-    /* Tamanho dos ícones */
     height: 35px;
     transition: transform 0.3s ease;
 }
 
 .social-icons a img:hover {
     transform: scale(1.2);
-    /* Aumenta os ícones ao passar o mouse */
 }
 
 .img-1 {
@@ -74,17 +71,11 @@ body {
     width: 100%;
     height: auto;
     max-height: 103vh; /* Define uma altura máxima relativa à tela */
-    /* A altura ocupará toda a tela */
     object-fit: cover;
-    /* Ajusta a imagem para preencher o espaço */
     display: block;
-    /* Evita espaços extras ao redor da imagem */
     background-position: center;
-    /* Centraliza o foco da imagem */
     background-repeat: no-repeat;
-    /* Impede que a imagem se repita */
     background-size: cover;
-    /* Ajusta para cobrir todo o contêiner */
 }
 
 .banner {
@@ -113,8 +104,8 @@ body {
 .imagem-sobre {
     width: 40%;
     height: auto;
-    border-radius: 10px; /* Bordas arredondadas */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra leve */
+    border-radius: 10px; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
 }
 
 .texto-sobre {
@@ -148,16 +139,16 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 40px; /* Aumentei o espaço entre imagem e descrição */
+    gap: 40px; 
     max-width: 1200px;
-    margin: 50px auto; /* Espaço abaixo do banner */
+    margin: 50px auto; 
     padding: 20px;
 }
 
 .carrossel-container {
     position: relative;
-    width: 500px; /* Aumentei o tamanho */
-    height: 600px; /* Aumentei a altura */
+    width: 500px; 
+    height: 600px; 
     overflow: hidden;
     flex-shrink: 0; /* Evita que o carrossel diminua */
 }
@@ -199,8 +190,6 @@ body {
 #next {
     right: 10px;
 }
-
-/* Ajuste para a descrição ficar alinhada à direita */
 .descricao {
     max-width: 500px;
     text-align: left; /* Mantém o texto alinhado à esquerda */
@@ -233,21 +222,20 @@ body {
 }
 .grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Mantém 3 colunas */
-    gap: 1rem; /* Espaço entre os itens */
-    max-width: 100%; /* Agora ocupa toda a largura da seção */
-    width: 100%; /* Garante que ocupe o espaço corretamente */
-    margin: 0 auto; /* Centraliza na página */
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 1rem; 
+    max-width: 100%; 
+    width: 100%; 
+    margin: 0 auto;
 }
 
 .produtos {
     max-width: 1200px; 
-    margin: 0 auto; /* Garante centralização */
-    text-align: center; /* Centraliza o texto dentro da seção */
+    margin: 0 auto; 
+    text-align: center; 
     background: #fff;
-    padding: 2rem 0; /* Adiciona espaço para respirar */
+    padding: 2rem 0;
 }
-
 
 .produtos h2 {
     font-size: 2rem;
@@ -349,7 +337,6 @@ footer {
 }
 
 @media (max-width: 480px) {
-    /* Ajuste da logo para o canto esquerdo */
     .container {
         justify-content: flex-start;
         position: relative; 
@@ -381,27 +368,138 @@ footer {
         width: 70px;
     }
 
-    .compra-img, .camiseta-img {
-        width: 100px;
+    .nova-colecao img {
+        width: 80%; /* Reduzi um pouco o tamanho */
+        max-width: 250px; /* Defini um limite para não ficarem muito grandes */
     }
 
-    .btn-comprar {
-        width: 80px;
-        height: 30px;
-        font-size: 12px;
+    
+    .carrossel-container {
+        width: 100%;
+        height: auto;
+    }
+
+    .carrossel-item {
+        width: 100%;
+        height: auto;
+    }
+
+    .descricao {
+        display: none;
+    }
+
+    .produtos .grid {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .produto {
+        width: 90%;
+    }
+
+    .produto img {
+        width: 100%;
     }
 
     .container-sobre {
         flex-direction: column;
-        text-align: center; 
+        text-align: center;
     }
 
     .imagem-sobre {
-        width: 100%; 
+        width: 100%;
     }
 
     .texto-sobre {
-        width: 100%; 
+        width: 100%;
     }
+
+    #voltar-ao-topo {
+        display: none !important;
+    } 
 }
 
+@media (max-width: 768px) {
+    .container {
+        justify-content: flex-start;
+        position: relative; 
+        }
+    .logo {
+        width: 30px;
+    }
+    
+    .menu {
+        display: none;
+    }
+
+    .social-icons {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .social-icons a img {
+        width: 25px;
+        height: 25px;
+    }
+
+    .banner {
+        padding: 20px;
+        display: flex;
+    }
+
+    .banner img {
+        width: 100px;
+    }
+
+    .nova-colecao img {
+        width: 70%;
+        max-width: 300px;
+    }
+
+    .carrossel-container {
+        width: 100%;
+        height: auto;
+    }
+
+    .carrossel-item {
+        width: 100%;
+        height: auto;
+    }
+
+    .descricao {
+        display: none;
+    }
+
+    .produtos .grid {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .produto {
+        width: 45%;
+    }
+
+    .produto img {
+        width: 100%;
+    }
+
+    .container-sobre {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .imagem-sobre {
+        width: 90%;
+    }
+
+    .texto-sobre {
+        width: 90%;
+    }
+
+    #voltar-ao-topo {
+        display: none !important;
+    }
+}
